@@ -9,14 +9,14 @@ script:
   - docker run suradidchao/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t suradidchao/multi-client -f ./client
-  - docker build -t suradidchao/muti-nginx -f ./nginx
-  - docker build -t suradidchao/multi-server -f ./server
-  - docker build -t suradidchao/multi-worker -f ./worker
+  - docker build -t chillshyld/multi-client -f ./client
+  - docker build -t chillshyld/muti-nginx -f ./nginx
+  - docker build -t chillshyld/multi-server -f ./server
+  - docker build -t chillshyld/multi-worker -f ./worker
   # Login in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push suradidchao/multi-client
-  - docker push suradidchao/multi-nginx
-  - docker push suradidchao/multi-server
-  - docker push suradidchao/multi-worker
+  - docker push chillshyld/multi-client
+  - docker push chillshyld/multi-nginx
+  - docker push chillshyld/multi-server
+  - docker push chillshyld/multi-worker
