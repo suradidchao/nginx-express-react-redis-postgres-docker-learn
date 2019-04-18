@@ -9,7 +9,7 @@ script:
   - docker run suradidchao/react-test npm test -- --coverage
   - echo "id"
   - echo "$DOCKER_ID"
-  - echo "password"
+  - echo "passwords"
   - echo "$DOCKER_PASSWORD"
 
 after_success:
