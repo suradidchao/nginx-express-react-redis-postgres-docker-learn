@@ -7,6 +7,10 @@ before_install:
 
 script:
   - docker run suradidchao/react-test npm test -- --coverage
+  - echo "id"
+  - echo "$DOCKER_ID"
+  - echo "password"
+  - echo "$DOCKER_PASSWORD"
 
 after_success:
   - docker build -t chillshyld/multi-client -f ./client
