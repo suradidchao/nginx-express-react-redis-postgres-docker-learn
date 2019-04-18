@@ -14,7 +14,7 @@ script:
 
 after_success:
   - docker build -t chillshyld/multi-client ./client
-  - docker build -t chillshyld/muti-nginx ./nginx
+  - docker build -t chillshyld/multi-nginx ./nginx
   - docker build -t chillshyld/multi-server ./server
   - docker build -t chillshyld/multi-worker ./worker
   # Login in to the docker CLI
